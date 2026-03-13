@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>日本経済 GDP分析レポート 2025年10-12月期 | 内閣府データに基づく考察</title>
+  <meta name="description" content="内閣府の国民経済計算（GDP統計）に基づく、2025年10-12月期の実質GDP成長率の推移と寄与度分析。エコノミスト視点での景気フェーズ判断と今後の注目点を解説。" />
+  <meta property="og:title" content="日本経済 GDP分析レポート 2025年10-12月期" />
+  <meta property="og:description" content="内閣府GDP統計データに基づく経済分析ダッシュボード。実質GDP成長率の推移、寄与度分析、景気フェーズ判断を可視化。" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== Hero Section ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        2025年10-12月期（2次速報値）
+      </div>
+      <h1>日本経済<br /><span>GDP分析レポート</span></h1>
+      <p class="hero-subtitle">
+        内閣府「国民経済計算」に基づく実質GDP成長率の推移と寄与度分析。<br />
+        2四半期ぶりのプラス成長が示す、内需主導の回復メカニズムを読み解く。
+      </p>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          出典：内閣府
+        </span>
+        <span class="hero-meta-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          対象期間：2015年〜2025年Q4
+        </span>
+        <span class="hero-meta-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          AI分析：Gemini
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== KPI Highlight ===== -->
+  <section class="section" id="kpi">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">📊 Latest Quarter</div>
+        <h2 class="section-title">2025年10-12月期 主要指標</h2>
+        <p class="section-desc">2四半期ぶりのプラス成長。消費・投資が揃って改善し、内需主導の回復基調を示す。</p>
+      </div>
+      <div class="kpi-grid fade-in">
+        <div class="kpi-card positive">
+          <div class="kpi-label">実質GDP成長率（前期比）</div>
+          <div class="kpi-value positive">+0.3%</div>
+          <div class="kpi-sub">年率換算 +1.3%</div>
+        </div>
+        <div class="kpi-card positive">
+          <div class="kpi-label">民間最終消費支出</div>
+          <div class="kpi-value positive">+0.3%</div>
+          <div class="kpi-sub">寄与度 約+0.2%pt</div>
+        </div>
+        <div class="kpi-card positive">
+          <div class="kpi-label">民間設備投資</div>
+          <div class="kpi-value positive">+1.3%</div>
+          <div class="kpi-sub">寄与度 約+0.2%pt</div>
+        </div>
+        <div class="kpi-card neutral">
+          <div class="kpi-label">純輸出（外需）</div>
+          <div class="kpi-value neutral">±0.0%</div>
+          <div class="kpi-sub">輸出+1.7% / 輸入-1.9%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GDP Growth Chart ===== -->
+  <section class="section" id="gdp-chart">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">📈 Time Series</div>
+        <h2 class="section-title">実質GDP成長率（前期比）の推移</h2>
+        <p class="section-desc">2015年Q1〜2025年Q4。コロナ禍による急落と反発、その後の回復軌道を俯瞰する。</p>
+      </div>
+      <div class="chart-wrapper fade-in">
+        <canvas id="gdpChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contribution Analysis ===== -->
+  <section class="section" id="contribution">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">🔍 Decomposition</div>
+        <h2 class="section-title">寄与度分析（2025年10-12月期）</h2>
+        <p class="section-desc">全体の成長率+0.3%に対し、各需要項目がどれだけ寄与したかを分解して分析。</p>
+      </div>
+
+      <div class="chart-wrapper fade-in" style="margin-bottom: 40px;">
+        <canvas id="contribChart"></canvas>
+      </div>
+
+      <div class="contrib-grid fade-in">
+        <div class="contrib-card">
+          <div class="contrib-icon">🛒</div>
+          <div class="contrib-title">民間消費</div>
+          <div class="contrib-value">前期比 <span class="positive">+0.3%</span>｜寄与度 <span class="positive">約+0.2%pt</span></div>
+          <p class="contrib-desc">物価高の影響で足踏みが続いていたが、賃上げ効果や定額減税などの政策効果もあり、家計の購買力が緩やかに改善。サービス消費や半耐久財で持ち直しの動き。</p>
+        </div>
+        <div class="contrib-card">
+          <div class="contrib-icon">🏭</div>
+          <div class="contrib-title">民間設備投資</div>
+          <div class="contrib-value">前期比 <span class="positive">+1.3%</span>｜寄与度 <span class="positive">約+0.2%pt</span></div>
+          <p class="contrib-desc">人手不足に対応する省力化・自動化投資、DX・研究開発投資が堅調に推移。企業の収益水準は過去最高圏にあり、投資意欲は衰えていない。</p>
+        </div>
+        <div class="contrib-card">
+          <div class="contrib-icon">🏛️</div>
+          <div class="contrib-title">政府支出</div>
+          <div class="contrib-value">政府消費 <span class="positive">+0.4%</span>｜寄与度 <span class="positive">約+0.1%pt</span></div>
+          <p class="contrib-desc">政府最終消費支出は増加し、成長を下支え。一方、公的固定資本形成（公共投資）は-0.5%と小幅な減少を記録。</p>
+        </div>
+        <div class="contrib-card">
+          <div class="contrib-icon">🌐</div>
+          <div class="contrib-title">外需（純輸出）</div>
+          <div class="contrib-value">寄与度 <span class="neutral-val">-0.0%pt</span>（ほぼ中立）</div>
+          <p class="contrib-desc">輸出（+1.7%）は堅調だったが、内需回復に伴い輸入も増加。外需全体としては成長率に対してニュートラルな結果。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Economist Analysis ===== -->
+  <section class="section" id="analysis">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">💡 Insight</div>
+        <h2 class="section-title">エコノミスト考察</h2>
+        <p class="section-desc">現在の日本経済の「景気フェーズ」と今後の注目点を、マクロ経済の視点から考察。</p>
+      </div>
+
+      <div class="analysis-content fade-in">
+        <!-- Phase Card -->
+        <div class="analysis-card full-width">
+          <h3><span class="icon">🎯</span> 景気フェーズ判断</h3>
+          <div class="analysis-phase-badge">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+            緩やかな回復局面の継続
+          </div>
+          <p style="color: var(--text-secondary); line-height: 1.9;">
+            現在の日本経済は、<strong style="color: var(--text-primary);">「内需主導による緩やかな回復局面」</strong>にあると判断されます。特に今回の統計で<strong style="color: var(--accent-emerald);">「消費」と「投資」が揃ってプラス</strong>に転じた点は、経済の自律的な回復メカニズムが働き始めている兆候として高く評価できます。
+          </p>
+        </div>
+
+        <!-- Strengths -->
+        <div class="analysis-card">
+          <h3><span class="icon">💪</span> 内需の力強さ</h3>
+          <ul class="analysis-list">
+            <li>
+              <strong>消費の底堅さ：</strong>2025年春闘での高い賃上げ率が浸透しつつあり、消費者マインドが改善。特にサービス消費や半耐久財で持ち直しの動きが顕著。
+            </li>
+            <li>
+              <strong>投資の持続性：</strong>脱炭素（GX）やAI関連の戦略的投資が、景気の腰折れを防ぐ「防波堤」として機能。企業の設備投資意欲は堅調を維持。
+            </li>
+          </ul>
+        </div>
+
+        <!-- Risks -->
+        <div class="analysis-card">
+          <h3><span class="icon">⚠️</span> 今後の注目点とリスク</h3>
+          <div class="risk-grid">
+            <div class="risk-item">
+              <div class="risk-icon">💰</div>
+              <div>
+                <div class="risk-title">2026年春闘の動向</div>
+                <p class="risk-desc">物価上昇を上回る賃上げが継続されるかが、デフレ完全脱却への鍵。</p>
+              </div>
+            </div>
+            <div class="risk-item">
+              <div class="risk-icon">🌍</div>
+              <div>
+                <div class="risk-title">通商リスク</div>
+                <p class="risk-desc">米国の関税政策の影響が自動車産業等で顕在化するリスク。外需の不確実性が内需センチメントを冷やさないか注視が必要。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <a href="https://www.esri.cao.go.jp/jp/sna/menu.html" target="_blank" rel="noopener noreferrer" class="footer-source">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+        出典：内閣府 国民経済計算（GDP統計）
+      </a>
+      <p class="footer-disclaimer">
+        本レポートは内閣府が公開するGDP統計データに基づき、Gemini（AI）が分析・考察したものです。<br />
+        内容の正確性には注意を払っていますが、投資判断等の最終的な意思決定にあたっては、政府統計の原典データをご確認ください。
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
