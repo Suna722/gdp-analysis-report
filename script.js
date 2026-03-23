@@ -36,36 +36,36 @@ const contribData = {
   labels: ["民間消費", "民間設備投資", "政府支出", "外需（純輸出）"],
   values: [0.2, 0.2, 0.1, 0.0],
   colors: [
-    "rgba(129, 140, 248, 0.85)",
-    "rgba(52, 211, 153, 0.85)",
-    "rgba(251, 191, 36, 0.85)",
-    "rgba(96, 165, 250, 0.85)"
+    "rgba(0, 71, 114, 0.8)",
+    "rgba(46, 139, 139, 0.8)",
+    "rgba(182, 141, 64, 0.8)",
+    "rgba(60, 145, 203, 0.8)"
   ],
   borderColors: [
-    "rgba(129, 140, 248, 1)",
-    "rgba(52, 211, 153, 1)",
-    "rgba(251, 191, 36, 1)",
-    "rgba(96, 165, 250, 1)"
+    "rgba(0, 71, 114, 1)",
+    "rgba(46, 139, 139, 1)",
+    "rgba(182, 141, 64, 1)",
+    "rgba(60, 145, 203, 1)"
   ]
 };
 
 // ===== Chart.js Global Config =====
-Chart.defaults.color = "#94a3b8";
-Chart.defaults.borderColor = "rgba(255,255,255,0.06)";
-Chart.defaults.font.family = "'Inter', 'Noto Sans JP', sans-serif";
+Chart.defaults.color = "#666666";
+Chart.defaults.borderColor = "rgba(0, 0, 0, 0.06)";
+Chart.defaults.font.family = "'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif";
 
 // ===== GDP Growth Rate Line Chart =====
 function createGDPChart() {
   const ctx = document.getElementById("gdpChart").getContext("2d");
 
-  // Create gradient
+  // Create gradient fill
   const gradient = ctx.createLinearGradient(0, 0, 0, 400);
-  gradient.addColorStop(0, "rgba(129, 140, 248, 0.25)");
-  gradient.addColorStop(1, "rgba(129, 140, 248, 0.0)");
+  gradient.addColorStop(0, "rgba(0, 71, 114, 0.15)");
+  gradient.addColorStop(1, "rgba(0, 71, 114, 0.0)");
 
   // Color each point based on positive/negative
   const pointColors = gdpData.values.map(v =>
-    v >= 0 ? "rgba(52, 211, 153, 1)" : "rgba(251, 113, 133, 1)"
+    v >= 0 ? "rgba(27, 129, 62, 1)" : "rgba(197, 61, 67, 1)"
   );
 
   new Chart(ctx, {
@@ -75,15 +75,15 @@ function createGDPChart() {
       datasets: [{
         label: "実質GDP成長率（前期比 %）",
         data: gdpData.values,
-        borderColor: "rgba(129, 140, 248, 1)",
+        borderColor: "rgba(0, 71, 114, 1)",
         backgroundColor: gradient,
-        borderWidth: 2.5,
+        borderWidth: 2,
         pointBackgroundColor: pointColors,
         pointBorderColor: pointColors,
-        pointRadius: 4,
-        pointHoverRadius: 7,
-        pointHoverBorderWidth: 3,
-        pointHoverBorderColor: "#fff",
+        pointRadius: 3.5,
+        pointHoverRadius: 6,
+        pointHoverBorderWidth: 2,
+        pointHoverBorderColor: "#004772",
         fill: true,
         tension: 0.3,
       }]
@@ -102,18 +102,20 @@ function createGDPChart() {
             padding: 20,
             usePointStyle: true,
             pointStyle: "circle",
-            font: { size: 13, weight: "500" }
+            font: { size: 12, weight: "500" },
+            color: "#333333"
           }
         },
         tooltip: {
-          backgroundColor: "rgba(15, 23, 42, 0.95)",
-          titleColor: "#f1f5f9",
-          bodyColor: "#cbd5e1",
-          borderColor: "rgba(99,102,241,0.3)",
+          backgroundColor: "rgba(0, 48, 85, 0.95)",
+          titleColor: "#FFFFFF",
+          bodyColor: "rgba(255,255,255,0.85)",
+          borderColor: "rgba(60, 145, 203, 0.4)",
           borderWidth: 1,
           padding: 14,
-          cornerRadius: 10,
+          cornerRadius: 4,
           displayColors: false,
+          titleFont: { family: "'Noto Serif JP', serif", weight: "600" },
           callbacks: {
             title: function(items) {
               const label = items[0].label;
@@ -138,6 +140,7 @@ function createGDPChart() {
             autoSkip: true,
             maxTicksLimit: 12,
             font: { size: 11 },
+            color: "#999999",
             callback: function(value, index) {
               const label = this.getLabelForValue(value);
               if (label.endsWith("Q1")) return label.substring(0, 4);
@@ -147,10 +150,11 @@ function createGDPChart() {
         },
         y: {
           grid: {
-            color: "rgba(255,255,255,0.04)",
+            color: "rgba(0, 0, 0, 0.04)",
           },
           ticks: {
-            font: { size: 12 },
+            font: { size: 11 },
+            color: "#999999",
             callback: function(value) { return value + "%"; }
           },
           suggestedMin: -8,
@@ -174,9 +178,9 @@ function createContribChart() {
         data: contribData.values,
         backgroundColor: contribData.colors,
         borderColor: contribData.borderColors,
-        borderWidth: 1.5,
-        borderRadius: 8,
-        barThickness: 36,
+        borderWidth: 1,
+        borderRadius: 3,
+        barThickness: 32,
       }]
     },
     options: {
@@ -186,13 +190,13 @@ function createContribChart() {
       plugins: {
         legend: { display: false },
         tooltip: {
-          backgroundColor: "rgba(15, 23, 42, 0.95)",
-          titleColor: "#f1f5f9",
-          bodyColor: "#cbd5e1",
-          borderColor: "rgba(99,102,241,0.3)",
+          backgroundColor: "rgba(0, 48, 85, 0.95)",
+          titleColor: "#FFFFFF",
+          bodyColor: "rgba(255,255,255,0.85)",
+          borderColor: "rgba(60, 145, 203, 0.4)",
           borderWidth: 1,
           padding: 14,
-          cornerRadius: 10,
+          cornerRadius: 4,
           callbacks: {
             label: function(item) {
               const val = item.parsed.x;
@@ -204,9 +208,10 @@ function createContribChart() {
       },
       scales: {
         x: {
-          grid: { color: "rgba(255,255,255,0.04)" },
+          grid: { color: "rgba(0, 0, 0, 0.04)" },
           ticks: {
-            font: { size: 12 },
+            font: { size: 11 },
+            color: "#999999",
             callback: function(value) { return value + "%pt"; }
           },
           suggestedMin: -0.1,
@@ -214,7 +219,10 @@ function createContribChart() {
         },
         y: {
           grid: { display: false },
-          ticks: { font: { size: 13, weight: "600" } }
+          ticks: {
+            font: { size: 12, weight: "600" },
+            color: "#333333"
+          }
         }
       }
     }
@@ -236,7 +244,6 @@ function initScrollAnimation() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        // Stagger animation
         setTimeout(() => {
           entry.target.classList.add("visible");
         }, index * 80);
