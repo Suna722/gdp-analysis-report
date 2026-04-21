@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>æ¥­ç¨®å¥ITäººæéè¦ãã¬ã³ã | æ¥æ¬çµæ¸ GDPåæã¬ãã¼ã</title>
+  <meta name="description" content="çµæ¸ç£æ¥­çã»IPAã»åçå´åçã®å¬çãã¼ã¿ã«åºã¥ããäºæ¥­ä¼ç¤¾ã»Web/SaaSä¼æ¥­ã»SIerå¥ã®ITäººæéè¦ãã¬ã³ãåæãGDPæé·ã¨é£åããäººæå¸å ´ã®ååãå¯è¦åã" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav-common.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== Global Navigation ===== -->
+  <nav class="global-nav" id="globalNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        GDPåæã¬ãã¼ã
+      </a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="ã¡ãã¥ã¼">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/></svg>
+          GDPæ¦æ³
+        </a></li>
+        <li><a href="demand-trends.html" class="active">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          æ¥­ç¨®å¥éè¦
+        </a></li>
+        <li><a href="skill-outlook.html">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          ã¹ã­ã«å¥å±æ
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== Breadcrumb ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="index.html">GDPåæã¬ãã¼ã</a></li>
+        <li class="separator">âº</li>
+        <li>æ¥­ç¨®å¥ITäººæéè¦ãã¬ã³ã</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== Hero Section ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        çµæ¸ç£æ¥­çã»IPAã»åçå´åçãã¼ã¿ã«åºã¥ãåæ
+      </div>
+      <h1>æ¥­ç¨®å¥<br /><span>ITäººæéè¦ãã¬ã³ã</span></h1>
+      <p class="hero-subtitle">
+        GDPæé·ç+0.3%ã®åéåå¾©ã¨è¨­åæè³+1.3%ãç¤ºããDXæè³æ¡å¤§ã®æ½®æµã<br />
+        äºæ¥­ä¼ç¤¾ã»Web/SaaSä¼æ¥­ã»SIerã®3ã»ã°ã¡ã³ãããäººæéè¦ã®æ§é å¤åãèª­ã¿è§£ãã
+      </p>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          åºå¸ï¼çµæ¸ç£æ¥­ç / IPA / åçå´åç
+        </span>
+        <span class="hero-meta-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          æçµæ´æ°ï¼2025å¹´åº¦èª¿æ»
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== KPI: Market Overview ===== -->
+  <section class="section section--alt" id="market-kpi">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð Market Overview</div>
+        <h2 class="section-title">ITäººæå¸å ´ ä¸»è¦ææ¨</h2>
+        <p class="section-desc">çµæ¸ç£æ¥­çã»IPAã»åçå´åçã®å¬ççµ±è¨ãç¤ºããITäººæéçµ¦ã®ç¾å¨å°ã</p>
+      </div>
+      <div class="kpi-grid fade-in">
+        <div class="kpi-card negative">
+          <div class="kpi-label">2030å¹´ ITäººæä¸è¶³äºæ¸¬</div>
+          <div class="kpi-value negative">æå¤§79ä¸äºº</div>
+          <div class="kpi-sub">çµæ¸ç£æ¥­çãITäººæéçµ¦ã«é¢ããèª¿æ»ã</div>
+        </div>
+        <div class="kpi-card positive">
+          <div class="kpi-label">ITæè¡è æå¹æ±äººåç</div>
+          <div class="kpi-value positive">2.5åè¶</div>
+          <div class="kpi-sub">åçå´åçãä¸è¬è·æ¥­ç´¹ä»ç¶æ³ãå¨è·ç¨®å¹³å1.19å</div>
+        </div>
+        <div class="kpi-card positive">
+          <div class="kpi-label">DXäººæä¸è¶³ä¼æ¥­å²å</div>
+          <div class="kpi-value negative">85.1%</div>
+          <div class="kpi-sub">IPAãDXåå2025ãæ¥ç±³ç¬æ¯è¼</div>
+        </div>
+        <div class="kpi-card positive">
+          <div class="kpi-label">2025å¹´åº¦ å½åITæè³é¡</div>
+          <div class="kpi-value positive">16.7åå</div>
+          <div class="kpi-sub">åå¹´åº¦æ¯+5.0%ï¼ç¢éçµæ¸ç ç©¶æï¼</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ITäººæä¸è¶³æ¨ç§»ãã£ã¼ã ===== -->
+  <section class="section" id="gap-chart">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð Supply-Demand Gap</div>
+        <h2 class="section-title">ITäººæ éçµ¦ã®ã£ããã®æ¨ç§»ã¨äºæ¸¬</h2>
+        <p class="section-desc">çµæ¸ç£æ¥­çã®è©¦ç®ã«åºã¥ã2018å¹´ã2030å¹´ã®ITäººæä¸è¶³æ°ã®æ¨ç§»ãéè¦ã®ä¼¸ã³ã«å¯¾ãä¾çµ¦ãè¿½ãã¤ããªãæ§é çèª²é¡ã</p>
+      </div>
+      <div class="chart-wrapper fade-in" id="gapChartWrapper">
+        <canvas id="gapChart"></canvas>
+      </div>
+      <div class="source-tag" style="margin-top: 12px;">åºå¸ï¼çµæ¸ç£æ¥­çãITäººæéçµ¦ã«é¢ããèª¿æ»ãï¼2019å¹´3æï¼ä¸­ä½ã·ããªãª</div>
+    </div>
+  </section>
+
+  <!-- ===== GDPé£åï¼è¨­åæè³ã¨DXæè³ ===== -->
+  <section class="section section--alt" id="investment">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð° Investment Trend</div>
+        <h2 class="section-title">è¨­åæè³ã¨DXæè³ã®é£å</h2>
+        <p class="section-desc">GDPå¯ä¸åº¦åæã§+0.2%ptãè¨é²ããæ°éè¨­åæè³ããã®åè¨³ã¨ãã¦DXé¢é£æè³ãæ¥æ¡å¤§ãã¦ããã</p>
+      </div>
+      <div class="chart-wrapper fade-in" id="investChartWrapper">
+        <canvas id="investChart"></canvas>
+      </div>
+
+      <div class="insight-callout fade-in">
+        <h3><span>ð¡</span> å¶æ¥­ã¤ã³ãµã¤ã</h3>
+        <p>ITæè³äºç®ããå¢é¡ãããä¼æ¥­ã¯<strong>45%</strong>ã¨èª¿æ»éå§ä»¥æ¥ã®æé«å¤ãæ´æ°ï¼ITRèª¿æ»2025ï¼ãDXé¢é£äºç®ãè¨ä¸ããä¼æ¥­ã¯<strong>82%</strong>ãAIé¢é£ã¯<strong>70%</strong>ã«éãã¦ããã<strong>ãäºç®ã¯ãããäººæãããªãã</strong>ã¨ããä¼æ¥­ã®èª²é¡ã¯æ·±å»åãã¦ãã¾ããããªã¼ã©ã³ã¹ITäººæã®æ´»ç¨ã¯ããã®éçµ¦ã®ã£ãããåããæãå³å¹æ§ã®é«ãé¸æè¢ã§ãã</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== æ¥­ç¨®å¥3ã»ã°ã¡ã³ã ===== -->
+  <section class="section" id="segments">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð¢ By Industry Segment</div>
+        <h2 class="section-title">é¡§å®¢ã»ã°ã¡ã³ãå¥ ITäººæéè¦</h2>
+        <p class="section-desc">äºæ¥­ä¼ç¤¾ã»Web/SaaSä¼æ¥­ã»SIerã®3ã¤ã®é¡§å®¢ã»ã°ã¡ã³ããç´é¢ããäººæèª²é¡ã¨ãçµæ¸ç°å¢ããã®å½±é¿ãåæã</p>
+      </div>
+
+      <div class="industry-grid fade-in">
+        <!-- äºæ¥­ä¼ç¤¾ -->
+        <div class="industry-card">
+          <div class="industry-card-header">
+            <div class="industry-card-icon">ð­</div>
+            <div>
+              <div class="industry-card-title">äºæ¥­ä¼ç¤¾</div>
+              <div class="industry-card-sub">è£½é æ¥­ã»éèã»å°å£²ã»ç©æµ ç­</div>
+            </div>
+          </div>
+          <div class="industry-card-body">
+            <div class="industry-card-stat">
+              <span class="stat-label">DXäººæä¸è¶³ç</span>
+              <span class="stat-value positive">85.1%</span>
+            </div>
+            <div class="industry-card-stat">
+              <span class="stat-label">ä¸»ãªéè¦é å</span>
+              <span class="stat-value" style="font-size: 0.85rem;">DXæ¨é² / åºå¹¹å·æ° / AIå°å¥</span>
+            </div>
+            <p>åè£½åã®æ©éãé«ã¾ãä¸æ¹ãç¤¾åã«ITäººæãå§åçã«ä¸è¶³ãIPAèª¿æ»ã§ã¯æ¥æ¬ä¼æ¥­ã®ITäººæã®<strong>72%ãITä¼æ¥­ã«åå¨</strong>ãã¦ãããã¦ã¼ã¶ã¼ä¼æ¥­å´ã¯æ¢æ§çãªäººææ¯æ¸ç¶æã«ããã</p>
+            <p>GDPçµ±è¨ã§è¨­åæè³+1.3%ãè¨é²ããèæ¯ã«ã¯ãåºå¹¹ã·ã¹ãã å·æ°ï¼2025å¹´ã®å´å¯¾å¿ï¼ãçååã»èªååæè³ãããããããã®ãã­ã¸ã§ã¯ããæãDXäººæã¸ã®éè¦ãæ¥å¢ãã¦ããã</p>
+            <div class="source-tag">åºå¸ï¼IPAãDXåå2025ã/ çµæ¸ç£æ¥­çãDXã¬ãã¼ãã</div>
+          </div>
+        </div>
+
+        <!-- Web/SaaSä¼æ¥­ -->
+        <div class="industry-card">
+          <div class="industry-card-header">
+            <div class="industry-card-icon">ð</div>
+            <div>
+              <div class="industry-card-title">Web / SaaSä¼æ¥­</div>
+              <div class="industry-card-sub">èªç¤¾ãã­ãã¯ãéçºåä¼æ¥­</div>
+            </div>
+          </div>
+          <div class="industry-card-body">
+            <div class="industry-card-stat">
+              <span class="stat-label">ã¨ã³ã¸ãã¢æ±äººåç</span>
+              <span class="stat-value positive">2.5åè¶</span>
+            </div>
+            <div class="industry-card-stat">
+              <span class="stat-label">ä¸»ãªéè¦é å</span>
+              <span class="stat-value" style="font-size: 0.85rem;">ãã«ã¹ã¿ãã¯ / SRE / MLã¨ã³ã¸ãã¢</span>
+            </div>
+            <p>æ°éæ¶è²»+0.3%ã®åå¾©ã¯ãBtoC SaaSãECé åã®äºæ¥­æ¡å¤§ãå¾æ¼ãããã­ãã¯ãéçºã®é«éåãæ±ããããä¸­ã<strong>å³æ¦åã®ãã«ã¹ã¿ãã¯ã¨ã³ã¸ãã¢ãSRE</strong>ã¸ã®éè¦ãç¹ã«é¼è¿«ãã¦ããã</p>
+            <p>AIæ©è½ã®çµã¿è¾¼ã¿ãå·®å¥åè¦å ã¨ãªããMLã¨ã³ã¸ãã¢ãLLMçµ±åã®ç¥è¦ãæã¤äººæã®äºå¥ªãæ¿åãæ­£ç¤¾å¡æ¡ç¨ã®ãªã¼ãã¿ã¤ã ã§ã¯éã«åãããããªã¼ã©ã³ã¹æ´»ç¨ãã¹ã¿ã³ãã¼ãåã</p>
+            <div class="source-tag">åºå¸ï¼åçå´åçãä¸è¬è·æ¥­ç´¹ä»ç¶æ³ã/ ITRãITæè³ååèª¿æ»2025ã</div>
+          </div>
+        </div>
+
+        <!-- SIer -->
+        <div class="industry-card">
+          <div class="industry-card-header">
+            <div class="industry-card-icon">ð§</div>
+            <div>
+              <div class="industry-card-title">SIer</div>
+              <div class="industry-card-sub">ã·ã¹ãã ã¤ã³ãã°ã¬ã¼ã¿ã¼</div>
+            </div>
+          </div>
+          <div class="industry-card-body">
+            <div class="industry-card-stat">
+              <span class="stat-label">ITäººæã®åå¨æ¯ç</span>
+              <span class="stat-value">ITä¼æ¥­ã«72%</span>
+            </div>
+            <div class="industry-card-stat">
+              <span class="stat-label">ä¸»ãªéè¦é å</span>
+              <span class="stat-value" style="font-size: 0.85rem;">PM / ã¯ã©ã¦ãç§»è¡ / ã»ã­ã¥ãªãã£</span>
+            </div>
+            <p>äºæ¥­ä¼ç¤¾ã®DXéè¦å¢ã«ããåæ³¨ã¯å èª¿ã ããèªç¤¾ã¨ã³ã¸ãã¢ã ãã§ã¯ãã­ã¸ã§ã¯ããåããããªãæ§é ãç¹ã«<strong>ã¯ã©ã¦ãç§»è¡ï¼AWS/Azure/GCPï¼ãã»ã­ã¥ãªãã£é å</strong>ã§ã®å°éäººæãã¼ãºãé¡èã</p>
+            <p>2025å¹´ã®å´åé¡ï¼èæ½åºå¹¹ç³»ã·ã¹ãã ã®å·æ°æéï¼ã«åããå¤§è¦æ¨¡æ¡ä»¶ãéä¸­ããPMã»ã¢ã¼ã­ãã¯ãå±¤ã®ä¸è¶³ãçµå¶èª²é¡ã¬ãã«ã«ãå¤é¨ã®å³æ¦åäººæã¨ã®åæ¥­ãä¸å¯é¿ãªç¶æ³ã</p>
+            <div class="source-tag">åºå¸ï¼çµæ¸ç£æ¥­çãDXã¬ãã¼ãã/ IPAãDXåå2024ã</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== æå¹æ±äººåçã®æ¯è¼ ===== -->
+  <section class="section section--alt" id="job-ratio">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð Job Market</div>
+        <h2 class="section-title">è·ç¨®å¥ æå¹æ±äººåçã®æ¯è¼</h2>
+        <p class="section-desc">åçå´åçãä¸è¬è·æ¥­ç´¹ä»ç¶æ³ãã«åºã¥ããITé¢é£è·ç¨®ã¨å¨è·ç¨®å¹³åã®æ±äººåçæ¯è¼ãITäººæã®å£²ãæå¸å ´ãé®®æã</p>
+      </div>
+      <div class="chart-wrapper fade-in" id="ratioChartWrapper">
+        <canvas id="ratioChart"></canvas>
+      </div>
+      <div class="source-tag" style="margin-top: 12px;">åºå¸ï¼åçå´åçãä¸è¬è·æ¥­ç´¹ä»ç¶æ³ãï¼2025å¹´12æçºè¡¨ãã¼ã¿ï¼</div>
+    </div>
+  </section>
+
+  <!-- ===== å¶æ¥­æ´»ç¨ã®ãã¤ã³ã ===== -->
+  <section class="section" id="sales-tips">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð¯ Sales Insight</div>
+        <h2 class="section-title">å¶æ¥­å ´é¢ã§ã®ãã¼ã¿æ´»ç¨ãã¤ã³ã</h2>
+        <p class="section-desc">é¡§å®¢ã»ã°ã¡ã³ããã¨ã«ãã©ã®ãã¼ã¿ãã»ã©ãä½¿ãã¨å¹æçããåè«ã®èª¬å¾åãé«ããããã®çç¼ç¹ã</p>
+      </div>
+
+      <div class="analysis-content fade-in">
+        <div class="analysis-card">
+          <h3><span class="icon">ð­</span> äºæ¥­ä¼ç¤¾ã¸ã®ææ¡æ</h3>
+          <ul class="analysis-list">
+            <li><strong>ã85.1%ã®ä¼æ¥­ãDXäººæä¸è¶³ãï¼IPAï¼</strong>ãåé ­ã«æç¤ºããèª²é¡ã®æ®éæ§ãç¤ºãããå¾¡ç¤¾ã ãã®åé¡ã§ã¯ãªããç£æ¥­å¨ä½ã®æ§é çèª²é¡ãã¨ãããã¬ã¼ãã³ã°ãæå¹ã</li>
+            <li><strong>GDPè¨­åæè³+1.3%</strong>ã®ãã¼ã¿ã§ãä»ç¤¾ã¯æè³ãæ¡å¤§ãã¦ãããã¨ç¤ºããç«¶åã¸ã®å±æ©æãåèµ·ãç¹ã«ã2025å¹´ã®å´¦ãå¯¾å¿ã®æéå¶ç´ãå¼·èª¿ã</li>
+            <li><strong>ITäººæã®72%ãITä¼æ¥­ã«åå¨</strong>ã¨ãããã¼ã¿ã§ãæ­£ç¤¾å¡æ¡ç¨ã®éçãè«ççã«èª¬æãããªã¼ã©ã³ã¹æ´»ç¨ãæ§é çãªè§£æ±ºç­ã§ãããã¨ãç¤ºãã</li>
+          </ul>
+        </div>
+        <div class="analysis-card">
+          <h3><span class="icon">ð</span> Web/SaaSä¼æ¥­ã¸ã®ææ¡æ</h3>
+          <ul class="analysis-list">
+            <li><strong>ã¨ã³ã¸ãã¢æ±äººåç2.5åè¶</strong>ã®ãã¼ã¿ã§æ¡ç¨ã®å°é£ããå±æããæ¡ç¨ã«3ã6ã¶æãããéã«ããªã¼ã©ã³ã¹ã§éçºãåé²ããããã¨ããææ¡ãåºãããããã</li>
+            <li><strong>æ°éæ¶è²»+0.3%åå¾©</strong>ã®GDPãã¼ã¿ã§å¸å ´æé·ã®è¿½ãé¢¨ãç¤ºãããä»ãããã­ãã¯ãéçºãå éãã¹ãã¿ã¤ãã³ã°ãã¨ãã urgency ãåµåºã</li>
+          </ul>
+        </div>
+        <div class="analysis-card full-width">
+          <h3><span class="icon">ð§</span> SIerã¸ã®ææ¡æ</h3>
+          <ul class="analysis-list">
+            <li><strong>ITæè³å¢é¡ä¼æ¥­45%ï¼éå»æé«ï¼</strong>ã®ãã¼ã¿ã§æ¡ä»¶å¢å ã®æ ¹æ ãæç¤ºããåæ³¨ã¯å¢ãããç¤¾åãªã½ã¼ã¹ã§ã¯åããããªããã¨ããèª²é¡ã«å±æãç¤ºãã</li>
+            <li><strong>ã¯ã©ã¦ãã»ã»ã­ã¥ãªãã£ã®å°éäººæä¸è¶³</strong>ã¯ç¹ã«æ·±å»ããå¿è¦ãªæã«å¿è¦ãªã¹ã­ã«ãèª¿éã§ãããããªã¼ã©ã³ã¹æ´»ç¨ã®ã¡ãªãããããã­ã¸ã§ã¯ãåä½ã®ã³ã¹ãæ§é ã¨åããã¦ææ¡ã</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-sources">
+        <a href="https://www.meti.go.jp/policy/it_policy/jinzai/gaiyou.pdf" target="_blank" rel="noopener noreferrer" class="footer-source">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          çµæ¸ç£æ¥­ç ITäººæéçµ¦èª¿æ»
+        </a>
+        <a href="https://www.ipa.go.jp/digital/chousa/dx-trend/dx-trend-2025.html" target="_blank" rel="noopener noreferrer" class="footer-source">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          IPA DXåå2025
+        </a>
+        <a href="https://www.mhlw.go.jp/stf/newpage_00032.html" target="_blank" rel="noopener noreferrer" class="footer-source">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          åçå´åç ä¸è¬è·æ¥­ç´¹ä»ç¶æ³
+        </a>
+      </div>
+      <p class="footer-disclaimer">
+        æ¬ã¬ãã¼ãã¯çµæ¸ç£æ¥­çã»IPAï¼æå ±å¦çæ¨é²æ©æ§ï¼ã»åçå´åçãå¬éããåç¨®çµ±è¨ãã¼ã¿ã«åºã¥ãåæãããã®ã§ãã<br />
+        ãã¼ã¿ã®æç¹ã»èª¿æ»ææ³ã®è©³ç´°ã¯ååºå¸åããç¢ºèªãã ããã
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Nav scroll effect & hamburger =====
+    window.addEventListener('scroll', () => {
+      document.getElementById('globalNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    document.getElementById('navHamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // ===== Chart.js Global Config =====
+    Chart.defaults.color = "#666666";
+    Chart.defaults.borderColor = "rgba(0, 0, 0, 0.06)";
+    Chart.defaults.font.family = "'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif";
+
+    // ===== ITäººæéçµ¦ã®ã£ãããã£ã¼ã =====
+    function createGapChart() {
+      const ctx = document.getElementById('gapChart').getContext('2d');
+      const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+      gradient.addColorStop(0, "rgba(197, 61, 67, 0.2)");
+      gradient.addColorStop(1, "rgba(197, 61, 67, 0.0)");
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['2018å¹´', '2020å¹´', '2022å¹´', '2025å¹´', '2027å¹´', '2030å¹´'],
+          datasets: [
+            {
+              label: 'ä½ä½ã·ããªãªï¼ä¸äººï¼',
+              data: [22, 30, 32, 36, 34, 16],
+              borderColor: 'rgba(60, 145, 203, 0.8)',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              pointRadius: 4,
+              pointBackgroundColor: 'rgba(60, 145, 203, 1)',
+              borderDash: [6, 3],
+              tension: 0.3
+            },
+            {
+              label: 'ä¸­ä½ã·ããªãªï¼ä¸äººï¼',
+              data: [22, 30, 35, 44, 48, 45],
+              borderColor: 'rgba(0, 71, 114, 1)',
+              backgroundColor: gradient,
+              borderWidth: 2.5,
+              pointRadius: 5,
+              pointBackgroundColor: 'rgba(0, 71, 114, 1)',
+              fill: true,
+              tension: 0.3
+            },
+            {
+              label: 'é«ä½ã·ããªãªï¼ä¸äººï¼',
+              data: [22, 30, 40, 54, 65, 79],
+              borderColor: 'rgba(197, 61, 67, 0.8)',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              pointRadius: 4,
+              pointBackgroundColor: 'rgba(197, 61, 67, 1)',
+              borderDash: [6, 3],
+              tension: 0.3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { padding: 20, usePointStyle: true, font: { size: 12 } }
+            },
+            tooltip: {
+              backgroundColor: "rgba(0, 48, 85, 0.95)",
+              titleColor: "#fff",
+              bodyColor: "rgba(255,255,255,0.85)",
+              padding: 14,
+              cornerRadius: 4,
+              callbacks: {
+                label: (item) => `${item.dataset.label}: ç´${item.parsed.y}ä¸äººä¸è¶³`
+              }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { font: { size: 12 } } },
+            y: {
+              grid: { color: "rgba(0,0,0,0.04)" },
+              ticks: { font: { size: 11 }, callback: v => v + 'ä¸äºº' },
+              suggestedMin: 0, suggestedMax: 85
+            }
+          }
+        }
+      });
+    }
+
+    // ===== ITæè³é¡æ¨ç§»ãã£ã¼ã =====
+    function createInvestChart() {
+      const ctx = document.getElementById('investChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['2022å¹´åº¦', '2023å¹´åº¦', '2024å¹´åº¦', '2025å¹´åº¦ï¼äºæ¸¬ï¼', '2026å¹´åº¦ï¼äºæ¸¬ï¼'],
+          datasets: [
+            {
+              label: 'ITæè³é¡ï¼ååï¼',
+              data: [14.3, 15.0, 15.9, 16.7, 17.1],
+              backgroundColor: 'rgba(0, 71, 114, 0.7)',
+              borderColor: 'rgba(0, 71, 114, 1)',
+              borderWidth: 1,
+              borderRadius: 3,
+              barPercentage: 0.6
+            },
+            {
+              label: 'ãã¡DXé¢é£æè³ï¼ååï¼',
+              data: [3.2, 3.8, 4.5, 5.2, 5.8],
+              backgroundColor: 'rgba(60, 145, 203, 0.7)',
+              borderColor: 'rgba(60, 145, 203, 1)',
+              borderWidth: 1,
+              borderRadius: 3,
+              barPercentage: 0.6
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { padding: 20, usePointStyle: true, font: { size: 12 } }
+            },
+            tooltip: {
+              backgroundColor: "rgba(0, 48, 85, 0.95)",
+              titleColor: "#fff",
+              bodyColor: "rgba(255,255,255,0.85)",
+              padding: 14,
+              cornerRadius: 4,
+              callbacks: {
+                label: (item) => `${item.dataset.label}: ${item.parsed.y}åå`
+              }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { font: { size: 11 } } },
+            y: {
+              grid: { color: "rgba(0,0,0,0.04)" },
+              ticks: { font: { size: 11 }, callback: v => v + 'åå' },
+              suggestedMin: 0, suggestedMax: 20
+            }
+          }
+        }
+      });
+    }
+
+    // ===== æ±äººåçæ¯è¼ãã£ã¼ã =====
+    function createRatioChart() {
+      const ctx = document.getElementById('ratioChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['å¨è·ç¨®å¹³å', 'æå ±å¦çæè¡è\nï¼æå¹æ±äººåçï¼', 'æå ±å¦çæè¡è\nï¼æ°è¦æ±äººåçï¼', 'ã·ã¹ãã ã¨ã³ã¸ãã¢'],
+          datasets: [{
+            label: 'æ±äººåçï¼åï¼',
+            data: [1.19, 1.59, 4.0, 2.5],
+            backgroundColor: [
+              'rgba(153, 153, 153, 0.6)',
+              'rgba(60, 145, 203, 0.7)',
+              'rgba(0, 71, 114, 0.8)',
+              'rgba(46, 139, 139, 0.7)'
+            ],
+            borderColor: [
+              'rgba(153, 153, 153, 1)',
+              'rgba(60, 145, 203, 1)',
+              'rgba(0, 71, 114, 1)',
+              'rgba(46, 139, 139, 1)'
+            ],
+            borderWidth: 1,
+            borderRadius: 3,
+            barPercentage: 0.55
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: "rgba(0, 48, 85, 0.95)",
+              titleColor: "#fff",
+              bodyColor: "rgba(255,255,255,0.85)",
+              padding: 14,
+              cornerRadius: 4,
+              callbacks: {
+                label: (item) => `æ±äººåç: ${item.parsed.y}å`
+              }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { font: { size: 11 }, maxRotation: 0 } },
+            y: {
+              grid: { color: "rgba(0,0,0,0.04)" },
+              ticks: { font: { size: 11 }, callback: v => v + 'å' },
+              suggestedMin: 0, suggestedMax: 5
+            }
+          }
+        }
+      });
+    }
+
+    // ===== Chart heights =====
+    function setChartHeights() {
+      document.getElementById('gapChartWrapper').style.height = '380px';
+      document.getElementById('investChartWrapper').style.height = '350px';
+      document.getElementById('ratioChartWrapper').style.height = '320px';
+    }
+
+    // ===== Scroll fade-in =====
+    function initScrollAnimation() {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      elements.forEach(el => observer.observe(el));
+    }
+
+    // ===== Init =====
+    document.addEventListener('DOMContentLoaded', () => {
+      setChartHeights();
+      createGapChart();
+      createInvestChart();
+      createRatioChart();
+      initScrollAnimation();
+    });
+  </script>
+
+</body>
+</html>
