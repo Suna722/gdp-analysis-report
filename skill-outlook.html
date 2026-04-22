@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ã¹ã­ã«å¥ å°æ¥å±æ | æ¥æ¬çµæ¸ GDPåæã¬ãã¼ã</title>
+  <meta name="description" content="AIã»ã¯ã©ã¦ãã»ã»ã­ã¥ãªãã£ã»ãã¼ã¿åæç­ã®ã¹ã­ã«å¥ITäººæéè¦ãå¯è¦åãçµæ¸ç£æ¥­çã»IPAã»ç·åçãã¼ã¿ã«åºã¥ãã¹ã­ã«å¥ã®å°æ¥å±æã¨äººææ¦ç¥ã¸ã®ç¤ºåã" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav-common.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+  <!-- ===== Global Navigation ===== -->
+  <nav class="global-nav" id="globalNav">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        GDPåæã¬ãã¼ã
+      </a>
+      <button class="nav-hamburger" id="navHamburger" aria-label="ã¡ãã¥ã¼">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-4 0a1 1 0 01-1-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 01-1 1h-2z"/></svg>
+          GDPæ¦æ³
+        </a></li>
+        <li><a href="demand-trends.html">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          æ¥­ç¨®å¥éè¦
+        </a></li>
+        <li><a href="skill-outlook.html" class="active">
+          <svg width="15" height="15" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          ã¹ã­ã«å¥å±æ
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== Breadcrumb ===== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <ul class="breadcrumb-list">
+        <li><a href="index.html">GDPåæã¬ãã¼ã</a></li>
+        <li class="separator">âº</li>
+        <li>ã¹ã­ã«å¥ å°æ¥å±æ</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ===== Hero Section ===== -->
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        IPAã»çµæ¸ç£æ¥­çã»ç·åçãã¼ã¿ã«åºã¥ãå±æ
+      </div>
+      <h1>ã¹ã­ã«å¥<br /><span>ITäººæ å°æ¥å±æ</span></h1>
+      <p class="hero-subtitle">
+        DXæè³ã®æ¥æ¡å¤§ã¨AIã®ççºçé²å±ãçããã¹ã­ã«å¥ã®éè¦æ§é å¤åã<br />
+        AIã»ã¯ã©ã¦ãã»ã»ã­ã¥ãªãã£ã»ãã¼ã¿åæââä¸è¶³ãæ·±å»ãª4é åã®ä»å¾ãå±æããã
+      </p>
+      <div class="hero-meta">
+        <span class="hero-meta-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          åºå¸ï¼IPA / çµæ¸ç£æ¥­ç / ç·åç
+        </span>
+        <span class="hero-meta-item">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          2025å¹´åº¦ãã¼ã¿ã«åºã¥ãåæ
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== KPI: Skill Demand ===== -->
+  <section class="section section--alt" id="skill-kpi">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð Skill Demand</div>
+        <h2 class="section-title">ã¹ã­ã«å¥éè¦ã®æ¦æ³</h2>
+        <p class="section-desc">çµæ¸ç£æ¥­çã®è©¦ç®ã§ã¯ãç¹ã«AIäººæã®ä¸è¶³ã2030å¹´ã«åãã¦æ¥æ¡å¤§ãã¯ã©ã¦ãã»ã»ã­ã¥ãªãã£é åã§ãéçµ¦évè¿«ãç¶ãã</p>
+      </div>
+      <div class="kpi-grid fade-in">
+        <div class="kpi-card negative">
+          <div class="kpi-label">2030å¹´ AIäººæ éçµ¦ã®ã£ãã</div>
+          <div class="kpi-value negative">12.4ä¸äºº</div>
+          <div class="kpi-sub">çµæ¸ç£æ¥­ç ä¸­ä½ã·ããªãª</div>
+        </div>
+        <div class="kpi-card positive">
+          <div class="kpi-label">AIé¢é£äºç®è¨ä¸ä¼æ¥­</div>
+          <div class="kpi-value positive">70%</div>
+          <div class="kpi-sub">ITRãITæè³ååèª¿æ»2025ã</div>
+        </div>
+        <div class="kpi-card negative">
+          <div class="kpi-label">DXäººæãå¤§å¹ã«ä¸è¶³ã</div>
+          <div class="kpi-value negative">58.5%</div>
+          <div class="kpi-sub">IPAããã¸ã¿ã«æä»£ã®ã¹ã­ã«å¤é©ã­ã«é¢ããèª¿æ»ã</div>
+        </div>
+        <div class="kpi-card neutral">
+          <div class="kpi-label">AIæ´»ç¨æ¹éç­å®æ¸ã¿ä¼æ¥­</div>
+          <div class="kpi-value neutral">ç´50%</div>
+          <div class="kpi-sub">ç·åçãä»¤å7å¹´ç æå ±éä¿¡ç½æ¸ã</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ã¹ã­ã«å¥éè¦ã¬ã¼ãã¼ãã£ã¼ã ===== -->
+  <section class="section" id="radar-chart">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð¯ Skill Radar</div>
+        <h2 class="section-title">éç¹ã¹ã­ã«é åã®éè¦åº¦ãããã³ã°</h2>
+        <p class="section-desc">IPAã»çµç£çãã¼ã¿ãç·åããä¸»è¦6ã¹ã­ã«é åã®éè¦åº¦ã»ä¸è¶³åº¦ã»æé·æ§ãã¬ã¼ãã¼ãã£ã¼ãã§å¯è¦åã</p>
+      </div>
+      <div class="chart-wrapper fade-in" id="radarChartWrapper">
+        <canvas id="radarChart"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ã¹ã­ã«å¥ã«ã¼ãè©³ç´° ===== -->
+  <section class="section section--alt" id="skill-detail">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð Skill Deep Dive</div>
+        <h2 class="section-title">æ³¨ç®ã¹ã­ã«é åã®è©³ç´°åæ</h2>
+        <p class="section-desc">åã¹ã­ã«é åãã¨ã«ãçµæ¸çèæ¯ã»éè¦ã®æ ¹æ ã»ããªã¼ã©ã³ã¹äººææ´»ç¨ã¨ã®æ¥ç¶ãåæã</p>
+      </div>
+
+      <div class="skill-grid fade-in">
+        <!-- AI / æ©æ¢°å­¦ç¿ -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-name">
+              <span class="skill-emoji">ð¤</span> AI / æ©æ¢°å­¦ç¿
+            </div>
+            <span class="skill-demand-badge very-high">éè¦ï¼æ¥µãã¦é«ã</span>
+          </div>
+          <div class="skill-card-body">
+            <p>GDPçµ±è¨ã§è¨­åæè³+1.3%ãè¨é²ããèæ¯ã®ä¸ã¤ããä¼æ¥­ã®AIå°å¥æè³ãAIé¢é£äºç®ãè¨ä¸ããä¼æ¥­ã¯<strong>70%</strong>ã«éããä¸æ¹ã2030å¹´ã®AIäººæä¸è¶³ã¯<strong>12.4ä¸äºº</strong>ã¨äºæ¸¬ãããæ·±å»ãªéçµ¦ã®ã£ããã</p>
+            <p>ç¹ã«LLMï¼å¤§è¦æ¨¡è¨èªã¢ãã«ï¼ã®æ¥­åé©ç¨ãMLOpsåºç¤æ§ç¯ãçæAIæ´»ç¨ã®PoCãæ¬çªå®è£ãæããäººæã®å¸å°æ§ã¯éç«ã£ã¦ãããããªã¼ã©ã³ã¹å¸å ´ã§ã®åä¾¡ãä¸æå¾åã</p>
+          </div>
+          <div class="skill-card-metrics">
+            <div class="skill-metric">
+              <div class="skill-metric-label">2030å¹´ ä¸è¶³äºæ¸¬</div>
+              <div class="skill-metric-value">12.4ä¸äºº</div>
+            </div>
+            <div class="skill-metric">
+              <div class="skill-metric-label">äºç®è¨ä¸ä¼æ¥­</div>
+              <div class="skill-metric-value">70%</div>
+            </div>
+          </div>
+          <div class="source-tag">çµæ¸ç£æ¥­çãITäººæéçµ¦ã«é¢ããèª¿æ»ã/ ITRèª¿æ»</div>
+        </div>
+
+        <!-- ã¯ã©ã¦ã -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-name">
+              <span class="skill-emoji">âï¸</span> ã¯ã©ã¦ã / ã¤ã³ãã©
+            </div>
+            <span class="skill-demand-badge very-high">éè¦ï¼æ¥µãã¦é«ã</span>
+          </div>
+          <div class="skill-card-body">
+            <p>ã2025å¹´ã®å´ãåé¡ãèæ¯ã«ããªã³ãã¬ãã¹ããã¯ã©ã¦ãã¸ã®åºå¹¹ã·ã¹ãã ç§»è¡ãå éãIPAèª¿æ»ã§ã¯DXæ¨é²äººæã®éã«ã¤ãã¦<strong>58.5%ã®ä¼æ¥­ããå¤§å¹ã«ä¸è¶³ã</strong>ã¨åç­ãã¦ããããã®ä¸­æ ¸ãå ããã®ãã¯ã©ã¦ãã¢ã¼ã­ãã¯ããSREã</p>
+            <p>AWSã»Azureã»GCPã®ãã«ãã¯ã©ã¦ãå¯¾å¿ãIaCï¼Infrastructure as Codeï¼ãã³ã³ãããªã¼ã±ã¹ãã¬ã¼ã·ã§ã³ç­ã®å®è·µçã¹ã­ã«ãæ±ããããSIerçµç±ã®æ¡ä»¶ã§ãé«åä¾¡ã§éè¦ãç¶ãã</p>
+          </div>
+          <div class="skill-card-metrics">
+            <div class="skill-metric">
+              <div class="skill-metric-label">å¤§å¹ä¸è¶³åç­</div>
+              <div class="skill-metric-value">58.5%</div>
+            </div>
+            <div class="skill-metric">
+              <div class="skill-metric-label">ä¸»è¦å¯¾è±¡é¡§å®¢</div>
+              <div class="skill-metric-value" style="font-size: 0.85rem;">äºæ¥­ä¼ç¤¾ / SIer</div>
+            </div>
+          </div>
+          <div class="source-tag">IPAããã¸ã¿ã«æä»£ã®ã¹ã­ã«å¤é©ç­ã«é¢ããèª¿æ»ã</div>
+        </div>
+
+        <!-- ã»ã­ã¥ãªãã£ -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-name">
+              <span class="skill-emoji">ð¡ï¸</span> ãµã¤ãã¼ã»ã­ã¥ãªãã£
+            </div>
+            <span class="skill-demand-badge high">éè¦ï¼é«ã</span>
+          </div>
+          <div class="skill-card-body">
+            <p>DXã®é²å±ã«ä¼´ããµã¤ãã¼æ»æãªã¹ã¯ãå¢å¤§ãç·åçãæå ±éä¿¡ç½æ¸ãã§ã¯ãã¸ã¿ã«é åã®æ¡å¤§ï¼SNSã»ã¯ã©ã¦ãç­ï¼ã«ä¼´ãã»ã­ã¥ãªãã£å¯¾ç­ã®éè¦æ§ãå¼·èª¿ããã¦ããã</p>
+            <p>äºæ¥­ä¼ç¤¾ã§ã¯CSIRTä½å¶ã®æ§ç¯ãSIerã§ã¯ã»ã­ã¥ãªãã£è¨ºæ­ã»ç£è¦ã®æ¡ä»¶ãå¢å ãã¼ã­ãã©ã¹ãã¢ã¼ã­ãã¯ãã£ãSOCéç¨ããããã¬ã¼ã·ã§ã³ãã¹ãã®å®åçµé¨ãæã¤äººæãå¸å°ãç¹ã«éèã»å»çæ¥­çã§ã®éè¦ãé¡èã</p>
+          </div>
+          <div class="skill-card-metrics">
+            <div class="skill-metric">
+              <div class="skill-metric-label">éè¦æé·æ§</div>
+              <div class="skill-metric-value">æ¥æ¡å¤§</div>
+            </div>
+            <div class="skill-metric">
+              <div class="skill-metric-label">ç¹ã«éè¦ã®é«ãæ¥­ç¨®</div>
+              <div class="skill-metric-value" style="font-size: 0.85rem;">éè / å»ç / å®å¬åº</div>
+            </div>
+          </div>
+          <div class="source-tag">ç·åçãä»¤å7å¹´ç æå ±éä¿¡ç½æ¸ã</div>
+        </div>
+
+        <!-- ãã¼ã¿åæ -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-name">
+              <span class="skill-emoji">ð</span> ãã¼ã¿ãµã¤ã¨ã³ã¹ / åæ
+            </div>
+            <span class="skill-demand-badge high">éè¦ï¼é«ã</span>
+          </div>
+          <div class="skill-card-body">
+            <p>IPAã¯ããã¼ã¿ãµã¤ã¨ã³ãã£ã¹ãããDXæ¨é²ã®éè¦äººæé¡åã¨ãã¦ä½ç½®ã¥ãããã¼ã¿å©æ´»ç¨éè¦ã®é«ã¾ããèæ¯ã«ãããç¹ã«BIåºç¤æ§ç¯ããã¼ã¿ããªãã³çµå¶ã®å®ç¾ãæããäººæãæ±ãããã¦ããã</p>
+            <p>Web/SaaSä¼æ¥­ã§ã¯ã°ã­ã¼ã¹ããã¯ããã­ãã¯ãåæãäºæ¥­ä¼ç¤¾ã§ã¯çµå¶ããã·ã¥ãã¼ãæ§ç¯ããµãã©ã¤ãã§ã¼ã³æé©åã®æèã§éè¦ãå¢å ãPythonã«å ããdbtã»Snowflakeç­ã®ã¢ãã³ãã¼ã¿ã¹ã¿ãã¯ç¥è¦ãä»å ä¾¡å¤ã«ã</p>
+          </div>
+          <div class="skill-card-metrics">
+            <div class="skill-metric">
+              <div class="skill-metric-label">IPAåé¡</div>
+              <div class="skill-metric-value" style="font-size: 0.85rem;">éè¦äººæé¡å</div>
+            </div>
+            <div class="skill-metric">
+              <div class="skill-metric-label">ä¸»è¦å¯¾è±¡é¡§å®¢</div>
+              <div class="skill-metric-value" style="font-size: 0.85rem;">Web/SaaS / äºæ¥­ä¼ç¤¾</div>
+            </div>
+          </div>
+          <div class="source-tag">IPAãDXåå2025ã</div>
+        </div>
+
+        <!-- PM / ãã¸ãã¹ã¢ã¼ã­ãã¯ã -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-name">
+              <span class="skill-emoji">ð¯</span> PM / ãã¸ãã¹ã¢ã¼ã­ãã¯ã
+            </div>
+            <span class="skill-demand-badge growing">éè¦ï¼æ¡å¤§ä¸­</span>
+          </div>
+          <div class="skill-card-body">
+            <p>IPAãå®ç¾©ããããã¸ãã¹ã¢ã¼ã­ãã¯ããã¯ãDXæ¨é²ããªã¼ãããäººæã¨ãã¦é«ããã¼ãºããããæè¡ã¨ãã¸ãã¹ã®æ©æ¸¡ãå½¹ãæããDXã®æ§æ³ç­å®ããå®è¡ç®¡çã¾ã§ä¸æ°éè²«ã§æ¨é²ã§ããäººæãä¸è¶³ã</p>
+            <p>äºæ¥­ä¼ç¤¾ã®DXãã­ã¸ã§ã¯ããSIerã®å¤§è¦æ¨¡æ¡ä»¶ã§ç¹ã«éè¦ãé«ããã¢ã¸ã£ã¤ã«éçºã®PO/SMãITã³ã³ãµã«ãã£ã³ã°çµé¨èãæ±ãããããããã¸ã¡ã³ãå±¤ã¯æ­£ç¤¾å¡ä»¥ä¸ã«ããªã¼ã©ã³ã¹ã®å³æ¦åãè©ä¾¡ãããã±ã¼ã¹ãå¤ãã</p>
+          </div>
+          <div class="skill-card-metrics">
+            <div class="skill-metric">
+              <div class="skill-metric-label">IPAåé¡</div>
+              <div class="skill-metric-value" style="font-size: 0.85rem;">DXæ¨é²ãªã¼ãã¼</div>
+            </div>
+            <div class="skill-metric">
+              <div class="skill-metric-label">ä¸»è¦å¯¾è±¡é¡§å®¢</div>
+              <div class="skill-metric-value" style="font-size: 0.85rem;">äºæ¥­ä¼ç¤¾ / SIer</div>
+            </div>
+          </div>
+          <div class="source-tag">IPAãDXåå2025ã</div>
+        </div>
+
+        <!-- ãã«ã¹ã¿ãã¯ / ã¢ãã³Web -->
+        <div class="skill-card">
+          <div class="skill-card-header">
+            <div class="skill-card-name">
+              <span class="skill-emoji">â¡</span> ãã«ã¹ã¿ãã¯ / ã¢ãã³Web
+            </div>
+            <span class="skill-demand-badge growing">éè¦ï¼æ¡å¤§ä¸­</span>
+          </div>
+          <div class="skill-card-body">
+            <p>æ°éæ¶è²»ã®åå¾©ï¼GDP+0.3%ï¼ã¯BtoC/BtoB SaaSå¸å ´ã®æ¡å¤§ãå¾æ¼ãããã­ãã¯ãéçºã®é«éåãç«¶äºåã®æºæ³ã¨ãªãä¸­ããã­ã³ãããããã¯ã¨ã³ããã¤ã³ãã©ã¾ã§ä¸äººã§å¯¾å¿ã§ãããã«ã¹ã¿ãã¯ã¨ã³ã¸ãã¢ã®éè¦ãå¢å ã</p>
+            <p>React/Next.jsãTypeScriptãGo/Rustãªã©ã¢ãã³ãªæè¡ã¹ã¿ãã¯ã¸ã®å¯¾å¿åãæ±ãããããWeb/SaaSä¼æ¥­ã§ã¯æ¡ç¨ã®å°é£ãï¼æ±äººåç2.5åè¶ï¼ããããªã¼ã©ã³ã¹æ´»ç¨ãå®çåã</p>
+          </div>
+          <div class="skill-card-metrics">
+            <div class="skill-metric">
+              <div class="skill-metric-label">æ±äººåç</div>
+              <div class="skill-metric-value">2.5åè¶</div>
+            </div>
+            <div class="skill-metric">
+              <div class="skill-metric-label">ä¸»è¦å¯¾è±¡é¡§å®¢</div>
+              <div class="skill-metric-value" style="font-size: 0.85rem;">Web/SaaSä¼æ¥­</div>
+            </div>
+          </div>
+          <div class="source-tag">åçå´åçãä¸è¬è·æ¥­ç´¹ä»ç¶æ³ã</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ã¹ã­ã«éè¦ã®å°æ¥äºæ¸¬ãã£ã¼ã ===== -->
+  <section class="section" id="forecast">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð® Forecast</div>
+        <h2 class="section-title">ã¹ã­ã«é åå¥ éè¦æé·äºæ¸¬</h2>
+        <p class="section-desc">çµæ¸ç£æ¥­çã»IPAã»ç·åçã®ãã¼ã¿ãåºã«ã2025å¹´â2030å¹´ã®ã¹ã­ã«å¥éè¦æé·ãææ°åãã¦æ¯è¼ã</p>
+      </div>
+      <div class="chart-wrapper fade-in" id="forecastChartWrapper">
+        <canvas id="forecastChart"></canvas>
+      </div>
+      <div class="source-tag" style="margin-top: 12px;">â» çµæ¸ç£æ¥­çã»IPAåç¨®èª¿æ»ãã¼ã¿ãåºã«éè¦æé·åº¦ãææ°åï¼2025å¹´=100ï¼ãåèå¤ã¨ãã¦ã®æ¨è¨ã</div>
+    </div>
+  </section>
+
+  <!-- ===== é¡§å®¢å¥Ãã¹ã­ã« ãããã³ã°ã¬ã¤ã ===== -->
+  <section class="section section--alt" id="matching">
+    <div class="container">
+      <div class="section-header fade-in">
+        <div class="section-label">ð Matching Guide</div>
+        <h2 class="section-title">é¡§å®¢ã»ã°ã¡ã³ã Ã ã¹ã­ã«é å ãããã³ã°ããã</h2>
+        <p class="section-desc">ã©ã®é¡§å®¢ã«ã©ã®ã¹ã­ã«é åã®äººæãææ¡ãã¹ãããå¬çãã¼ã¿ã«è£æã¡ãããææ¡æ¦ç¥ãããã</p>
+      </div>
+
+      <div class="analysis-content fade-in">
+        <div class="analysis-card">
+          <h3><span class="icon">ð­</span> äºæ¥­ä¼ç¤¾åã éç¹ã¹ã­ã«</h3>
+          <ul class="analysis-list">
+            <li><strong>ãã¸ãã¹ã¢ã¼ã­ãã¯ã / PMï¼</strong>DXæ¨é²ããªã¼ãã§ããäººæãIPAãDXåå2025ãã§æããã¼ãºãé«ãäººæé¡åãçµå¶å±¤ã¸ã®èª¬æåã¨æè¡çè§£ãå¼ã­åããäººæãææ¡ã</li>
+            <li><strong>ã¯ã©ã¦ãã¢ã¼ã­ãã¯ãï¼</strong>ã2025å¹´ã®å´ãå¯¾å¿ã®ã¬ã¬ã·ã¼å·æ°æ¡ä»¶ãAWS/Azureç§»è¡ã®å®åçµé¨èãåªåçã«ææ¡ã</li>
+            <li><strong>AI / ãã¼ã¿åæï¼</strong>çæAIæ´»ç¨ã®PoCãæ¬çªå®è£ãçµå¶ããã·ã¥ãã¼ãæ§ç¯ããã¼ã¿ããªãã³çµå¶ã®å®ç¾ãã¼ããã¼ã¨ãã¦ã</li>
+          </ul>
+        </div>
+
+        <div class="analysis-card">
+          <h3><span class="icon">ð</span> Web / SaaSä¼æ¥­åã éç¹ã¹ã­ã«</h3>
+          <ul class="analysis-list">
+            <li><strong>ãã«ã¹ã¿ãã¯ / ã¢ãã³Webï¼</strong>ãã­ãã¯ãéçºã®å³æ¦åãReact/Next.js + TypeScript + Go/Rustã®æè¡ã¹ã¿ãã¯ãæ¡ç¨ãªã¼ãã¿ã¤ã ç­ç¸®ã®åãæ­ã¨ãã¦ã</li>
+            <li><strong>MLã¨ã³ã¸ãã¢ï¼</strong>ãã­ãã¯ãã¸ã®AIæ©è½çµã¿è¾¼ã¿ãæ¨è¦ã¨ã³ã¸ã³ãèªç¶è¨èªå¦çãLLMçµ±åãªã©ã®å®è£çµé¨èã</li>
+            <li><strong>SRE / DevOpsï¼</strong>ãµã¼ãã¹ã®ä¿¡é ¼æ§ã¨ã¹ã±ã¼ã©ããªãã£ç¢ºä¿ãKubernetesãTerraformãå¯è¦³æ¸¬æ§åºç¤ã®æ§ç¯ã»éç¨çµé¨èã</li>
+          </ul>
+        </div>
+
+        <div class="analysis-card full-width">
+          <h3><span class="icon">ð§</span> SIeråã éç¹ã¹ã­ã«</h3>
+          <ul class="analysis-list">
+            <li><strong>ã¯ã©ã¦ãç§»è¡ã¨ã³ã¸ãã¢ï¼</strong>äºæ¥­ä¼ç¤¾ã®åºå¹¹ç³»ã¯ã©ã¦ãç§»è¡ãã­ã¸ã§ã¯ãã§éè¦éä¸­ãAWS/Azureèªå®è³æ ¼ä¿æèããã¤ã°ã¬ã¼ã·ã§ã³å®åçµé¨èã®ææ¡ãå¹æçããåæ³¨ã¯å¢ããããªã½ã¼ã¹ãè¶³ããªããèª²é¡ãç´æ¥è§£æ±ºã</li>
+            <li><strong>ã»ã­ã¥ãªãã£ã¨ã³ã¸ãã¢ï¼</strong>éèã»å»çã»å®å¬åºæ¡ä»¶ã§ã®ã»ã­ã¥ãªãã£è¦ä»¶å¯¾å¿ãã¼ã­ãã©ã¹ãè¨­è¨ãSOCæ§ç¯ããããã¬ã¼ã·ã§ã³ãã¹ãç­ã®å°éäººæã¯ç¤¾åè²æãéã«åãããå¤é¨èª¿éãã¼ãºãé«ãã</li>
+            <li><strong>PM / ã¢ã¼ã­ãã¯ãï¼</strong>å¤§è¦æ¨¡ãã­ã¸ã§ã¯ãã®ä¸æµå·¥ç¨ãæããã·ãã¢äººæãã¢ã¸ã£ã¤ã«ã»ã¦ã©ã¼ã¿ã¼ãã©ã¼ã«åæ¹ã®å®åçµé¨ãé¡§å®¢æè¡åãæã¤ããªã¼ã©ã³ã¹PMã®ä¾¡å¤ã¯é«ãã</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="insight-callout fade-in">
+        <h3><span>ð¡</span> ã¾ã¨ãï¼çµæ¸ãã¼ã¿ãè£ä»ããããªã¼ã©ã³ã¹æ´»ç¨ã®å¿ç¶æ§</h3>
+        <p>GDPçµ±è¨ãç¤ºãåéåå¾©ï¼+0.3%ï¼ã¨è¨­åæè³ã®å èª¿ãï¼+1.3%ï¼ã¯ãä¼æ¥­ã®ITæè³ææ¬²ã®é«ããè£ä»ãã¦ãã¾ããä¸æ¹ã§ITäººæã®<strong>85.1%ã®ä¼æ¥­ã§ä¸è¶³</strong>ã2030å¹´ã«ã¯<strong>æå¤§79ä¸äººã®éçµ¦ã®ã£ãã</strong>ãäºæ¸¬ãããæ§é çèª²é¡ããäºç®ã¯ãããäººæãããªããââãã®èª²é¡ãè§£æ±ºããææ®µã¨ãã¦ãå¿è¦ãªã¹ã­ã«ãã»å¿è¦ãªæã«ã»æè»ã¨èª¿éã§ããããªã¼ã©ã³ã¹ITäººæã®æ´»ç¨ã¯ããã¯ãé¸æè¢ã§ã¯ãªã<strong>çµå¶ä¸ã®å¿ç¶</strong>ã§ãã</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-sources">
+        <a href="https://www.meti.go.jp/policy/it_policy/jinzai/gaiyou.pdf" target="_blank" rel="noopener noreferrer" class="footer-source">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          çµæ¸ç£æ¥­ç ITäººæéçµ¦èª¿æ»
+        </a>
+        <a href="https://www.ipa.go.jp/digital/chousa/dx-trend/dx-trend-2025.html" target="_blank" rel="noopener noreferrer" class="footer-source">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          IPA DXåå2025
+        </a>
+        <a href="https://www.soumu.go.jp/johotsusintokei/whitepaper/ja/r07/html/datashu.html" target="_blank" rel="noopener noreferrer" class="footer-source">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          ç·åç æå ±éä¿¡ç½æ¸
+        </a>
+      </div>
+      <p class="footer-disclaimer">
+        æ¬ã¬ãã¼ãã¯IPAï¼æå ±å¦çæ¨é²æ©æ§ï¼ã»çµæ¸ç£æ¥­çã»ç·åçãå¬éããåç¨®çµ±è¨ãã¼ã¿ã«åºã¥ãåæãããã®ã§ãã<br />
+        éè¦æé·äºæ¸¬ã¯åèå¤ã§ããããã¼ã¿ã®æç¹ã»èª¿æ»ææ³ã®è©³ç´°ã¯ååºå¸åããç¢ºèªãã ããã
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // ===== Nav scroll effect & hamburger =====
+    window.addEventListener('scroll', () => {
+      document.getElementById('globalNav').classList.toggle('scrolled', window.scrollY > 20);
+    });
+    document.getElementById('navHamburger').addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    // ===== Chart.js Global Config =====
+    Chart.defaults.color = "#666666";
+    Chart.defaults.borderColor = "rgba(0, 0, 0, 0.06)";
+    Chart.defaults.font.family = "'Noto Sans JP', 'Hiragino Kaku Gothic ProN', sans-serif";
+
+    // ===== ã¬ã¼ãã¼ãã£ã¼ã =====
+    function createRadarChart() {
+      const ctx = document.getElementById('radarChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'radar',
+        data: {
+          labels: ['AI / æ©æ¢°å­¦ç¿', 'ã¯ã©ã¦ã / ã¤ã³ãã©', 'ãµã¤ãã¼ã»ã­ã¥ãªãã£', 'ãã¼ã¿ãµã¤ã¨ã³ã¹', 'PM / BA', 'ãã«ã¹ã¿ãã¯'],
+          datasets: [
+            {
+              label: 'ç¾å¨ã®éè¦åº¦',
+              data: [95, 90, 80, 75, 70, 78],
+              borderColor: 'rgba(0, 71, 114, 1)',
+              backgroundColor: 'rgba(0, 71, 114, 0.1)',
+              borderWidth: 2,
+              pointBackgroundColor: 'rgba(0, 71, 114, 1)',
+              pointRadius: 4
+            },
+            {
+              label: 'ä¸è¶³ã®æ·±å»åº¦',
+              data: [92, 85, 78, 68, 72, 70],
+              borderColor: 'rgba(197, 61, 67, 0.8)',
+              backgroundColor: 'rgba(197, 61, 67, 0.08)',
+              borderWidth: 2,
+              pointBackgroundColor: 'rgba(197, 61, 67, 1)',
+              pointRadius: 4
+            },
+            {
+              label: '2030å¹´ã¸ã®æé·æ§',
+              data: [98, 88, 90, 82, 75, 72],
+              borderColor: 'rgba(46, 139, 139, 0.8)',
+              backgroundColor: 'rgba(46, 139, 139, 0.08)',
+              borderWidth: 2,
+              borderDash: [5, 3],
+              pointBackgroundColor: 'rgba(46, 139, 139, 1)',
+              pointRadius: 4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              labels: { padding: 20, usePointStyle: true, font: { size: 12 } }
+            }
+          },
+          scales: {
+            r: {
+              beginAtZero: true,
+              max: 100,
+              ticks: { stepSize: 20, font: { size: 10 }, backdropColor: 'transparent' },
+              grid: { color: 'rgba(0, 0, 0, 0.06)' },
+              angleLines: { color: 'rgba(0, 0, 0, 0.06)' },
+              pointLabels: { font: { size: 12, weight: '600' }, color: '#333' }
+            }
+          }
+        }
+      });
+    }
+
+    // ===== éè¦æé·äºæ¸¬ãã£ã¼ã =====
+    function createForecastChart() {
+      const ctx = document.getElementById('forecastChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['2025å¹´', '2026å¹´', '2027å¹´', '2028å¹´', '2029å¹´', '2030å¹´'],
+          datasets: [
+            {
+              label: 'AI / æ©æ¢°å­¦ç¿',
+              data: [100, 118, 138, 160, 185, 215],
+              borderColor: 'rgba(197, 61, 67, 1)',
+              backgroundColor: 'transparent',
+              borderWidth: 2.5,
+              pointRadius: 4,
+              pointBackgroundColor: 'rgba(197, 61, 67, 1)',
+              tension: 0.3
+            },
+            {
+              label: 'ã¯ã©ã¦ã / ã¤ã³ãã©',
+              data: [100, 112, 125, 138, 152, 168],
+              borderColor: 'rgba(0, 71, 114, 1)',
+              backgroundColor: 'transparent',
+              borderWidth: 2.5,
+              pointRadius: 4,
+              pointBackgroundColor: 'rgba(0, 71, 114, 1)',
+              tension: 0.3
+            },
+            {
+              label: 'ã»ã­ã¥ãªãã£',
+              data: [100, 115, 130, 148, 165, 185],
+              borderColor: 'rgba(46, 139, 139, 1)',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              pointRadius: 4,
+              pointBackgroundColor: 'rgba(46, 139, 139, 1)',
+              tension: 0.3
+            },
+            {
+              label: 'ãã¼ã¿ãµã¤ã¨ã³ã¹',
+              data: [100, 110, 122, 135, 148, 162],
+              borderColor: 'rgba(182, 141, 64, 1)',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              pointRadius: 4,
+              pointBackgroundColor: 'rgba(182, 141, 64, 1)',
+              tension: 0.3
+            },
+            {
+              label: 'PM / BA',
+              data: [100, 108, 118, 128, 138, 150],
+              borderColor: 'rgba(60, 145, 203, 1)',
+              backgroundColor: 'transparent',
+              borderWidth: 2,
+              pointRadius: 4,
+              pointBackgroundColor: 'rgba(60, 145, 203, 1)',
+              borderDash: [5, 3],
+              tension: 0.3
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          interaction: { intersect: false, mode: 'index' },
+          plugins: {
+            legend: {
+              labels: { padding: 16, usePointStyle: true, font: { size: 11 } }
+            },
+            tooltip: {
+              backgroundColor: "rgba(0, 48, 85, 0.95)",
+              titleColor: "#fff",
+              bodyColor: "rgba(255,255,255,0.85)",
+              padding: 14,
+              cornerRadius: 4,
+              callbacks: {
+                label: (item) => `${item.dataset.label}: ${item.parsed.y}`
+              }
+            }
+          },
+          scales: {
+            x: { grid: { display: false }, ticks: { font: { size: 12 } } },
+            y: {
+              grid: { color: 'rgba(0,0,0,0.04)' },
+              ticks: { font: { size: 11 }, callback: v => v },
+              suggestedMin: 80, suggestedMax: 220,
+              title: { display: true, text: 'éè¦ææ°ï¼2025å¹´=100ï¼', font: { size: 11 }, color: '#999' }
+            }
+          }
+        }
+      });
+    }
+
+    // ===== Chart heights =====
+    function setChartHeights() {
+      document.getElementById('radarChartWrapper').style.height = '440px';
+      document.getElementById('forecastChartWrapper').style.height = '400px';
+    }
+
+    // ===== Scroll fade-in =====
+    function initScrollAnimation() {
+      const elements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => entry.target.classList.add('visible'), i * 80);
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      elements.forEach(el => observer.observe(el));
+    }
+
+    // ===== Init =====
+    document.addEventListener('DOMContentLoaded', () => {
+      setChartHeights();
+      createRadarChart();
+      createForecastChart();
+      initScrollAnimation();
+    });
+  </script>
+
+</body>
+</html>
